@@ -3,20 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kauê Ribeiro de Souza</title>
+<title>Kauê Souza</title>
 
 <style>
 body{
 font-family: Arial, sans-serif;
 margin:0;
-background:#f4f6f8;
+background:#eef2f7;
 color:#333;
 }
 
+h2{
+color:#1f3a5f;
+border-left:4px solid #1f3a5f;
+padding-left:10px;
+}
+
 header{
-background:#1f3a5f;
+background: linear-gradient(135deg,#1f3a5f,#2c5d91);
 color:white;
-padding:40px;
+padding:60px 20px;
 text-align:center;
 }
 
@@ -36,6 +42,12 @@ padding:20px;
 margin-bottom:20px;
 border-radius:8px;
 box-shadow:0 2px 6px rgba(0,0,0,0.1);
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
   a{
@@ -54,6 +66,61 @@ padding:20px;
 background:#1f3a5f;
 color:white;
 }
+
+.botao{
+display:inline-block;
+padding:12px 20px;
+background:#1f3a5f;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+transition:0.2s;
+}
+
+.botao:hover{
+background:#2c5d91;
+}
+
+.perfil{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+margin:20px auto;
+
+border:5px solid white;
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
+
+transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.perfil:hover{
+transform:scale(1.05);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* animação ao carregar a página */
+.fade-in{
+opacity:0;
+transform:translateY(20px);
+animation:fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.card:nth-child(1){animation-delay:0.2s;}
+.card:nth-child(2){animation-delay:0.4s;}
+.card:nth-child(3){animation-delay:0.6s;}
+.card:nth-child(4){animation-delay:0.8s;}
+.card:nth-child(5){animation-delay:0.10s;}
+
 </style>
 
 </head>
@@ -61,20 +128,24 @@ color:white;
 <body>
 
 <header>
-<h1>Kauê Ribeiro de Souza</h1>
-<p>Jovem Aprendiz Administrativo</p>
+<h1>Kauê Souza</h1>
+
+<img src="foto.png" "class="perfil fade-in">
+
+<p>Buscando oportunidade como Jovem Aprendiz Administrativo</p>
+<p>Interesse em organização, rotinas administrativas e tecnologia</p>
 <p>Rio de Janeiro – RJ</p>
 </header>
 
 <section>
 
-<div class="card">
-<h2>Sobre mim</h2>
+<div class="card fade-in">
+<h2>👤Sobre mim</h2>
 <p>Tenho 18 anos e estou em busca da minha primeira oportunidade profissional como Jovem Aprendiz na área administrativa. Sou organizado, responsável e interessado em aprender e desenvolver novas habilidades profissionais.</p>
 </div>
 
-<div class="card">
-<h2>Habilidades</h2>
+<div class="card fade-in">
+<h2>💻Habilidades</h2>
 <ul>
 <li>Organização de documentos</li>
 <li>Trabalho em equipe</li>
@@ -84,19 +155,26 @@ color:white;
 </ul>
 </div>
 
-<div class="card">
-<h2>Cursos em andamento</h2>
+<div class="card fade-in">
+<h2>📚Cursos em andamento</h2>
 <ul>
-<li>Informática básica</li>
+<li><a href="https://app.santanderopenacademy.com/pt-BR/course/power-bi-fundamentals" target="_blank">Power Bi Básico</a></li>
 <li><a href="https://app.santanderopenacademy.com/pt-BR/course/excel" target="_blank">Excel Básico</a></li>
-<li>Rotinas administrativas</li>
+<li><a href="https://www.ev.org.br/cursos/introducao-a-administracao" target="_blank">Rotinas administrativas</a></li>
 </ul>
 </div>
 
-<div class="card">
-<h2>Contato</h2>
-<p>Email: kauerbsouza@gmail.com</p>
-<p>Telefone: +55 (21) 97171-8578</p>
+<div class="card fade-in">
+<h2>📞Contato</h2>
+
+<p>
+<a class="botao" href="mailto:kauerbsouza@gmail.com">📧 Enviar Email</a>
+</p>
+
+<p>
+<a class="botao" href="https://wa.me/5521971718578" target="_blank">💬 Falar no WhatsApp</a>
+</p>
+
 </div>
 
 </section>
